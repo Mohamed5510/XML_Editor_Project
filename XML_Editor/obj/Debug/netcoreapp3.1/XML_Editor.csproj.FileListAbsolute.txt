@@ -1,0 +1,16 @@
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.exe
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.deps.json
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.runtimeconfig.json
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.runtimeconfig.dev.json
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.dll
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\bin\Debug\netcoreapp3.1\XML_Editor.pdb
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.csprojAssemblyReference.cache
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.Form1.resources
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.Properties.Resources.resources
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.csproj.GenerateResource.cache
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.AssemblyInfoInputs.cache
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.AssemblyInfo.cs
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.csproj.CoreCompileInputs.cache
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.dll
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.pdb
+F:\Studying\3rd CSE\1st term\Data structures & Algorithms\Final project\XML_Editor\XML_Editor\obj\Debug\netcoreapp3.1\XML_Editor.genruntimeconfig.cache
