@@ -12,161 +12,90 @@ namespace XML_Editor
      */
     internal class Formatting
     {
-     
-public static bool checkConsistency(string stringFile)
+public static string format(string s)
 {
-string[] xml = stringFile.Split("\n");
-Stack<String> tag = new Stack<string>();
-for (int i = 0; i < xml.Length; i++)
+string F = "";
+int n = 0;
+int i = 0;
+if (s[1] == '!' && s[1] == '?')
 {
-String line = xml[i];
-for (int k = 0; k < line.Length; k++)
-{
-if (line[k] == '<')
-{
-if (line[k + 1] == '/')
-{
-if (!(tag.Count == 0))
-{
-string ppp = "";
-int t = k + 1;
-while (line[t++] != '>')
-{
-ppp += line[t];
-}
-//string ppp = line.Substring(k+2, tag.Peek().Length);
-if (ppp != (tag.Peek()))
-{
-// unmatched closing and opening tags
-return false;
-}
+for (; i < s.Length; i++)
+if (s[i] != '>')
+F += s[i];
 else
 {
-tag.Pop();
-}
-}
-else
-{
-// closing tag without opening tag
-return false;
-}
-}
-else if (line[k + 1] != '!' && line[k + 1] != '?')
-{
-String temp = "";
-for (int j = k + 1; j < line.Length; j++)
-{
-if (line[j] != '>')
-{
-temp += line[j];
-}
-else
-{
-temp += '>';
+F += '>';
+F += '\n';
 break;
 }
 }
-tag.Push(temp);
-}
-}
-}
-}
-return ((tag.Count == 0));
-} /* function input:
-* function output:
-* function description:
-*
-*
-*
-*/
-public static string correct(string stringFile)
+for (; i < s.Length; i++)
 {
-if (checkConsistency(stringFile))
-return stringFile; string corrected = "";
-string[] xml = stringFile.Split("\n");
-Stack<String> tag = new Stack<string>();
-for (int i = 0; i < xml.Length; i++)
-{
-String line = xml[i];
-for (int k = 0; k < line.Length; k++)
-{
-corrected += line[k];
-if (line[k] == '<')
-{
-if (line[k + 1] == '/')
-{
-if (!(tag.Count == 0))
-{
-string ppp = line.Substring(k);
-if (ppp != ("</" + tag.Peek()))
-{
-// unmatched closing and opening tags
-corrected = corrected + "/" + tag.Peek();
-tag.Pop();
-break;
-}
-else
-{
-tag.Pop();
-}
-}
-else
-{
-// closing tag without opening tag
-if (corrected[corrected.Length - 1] == '<')
-corrected = corrected.Remove(corrected.Length - 1);
-break;
-}
-}
-else if (line[k + 1] != '!' && line[k + 1] != '?')
-{
-int e = corrected.Length - 1;
-if (e > 2)
-{
-while (e-- > 0)
-{
-if (corrected[e] == '\n' || corrected[e] == ' ' || corrected[e] == '\r')
+if (s[i] == ' ' || s[i] == '\n' || s[i] == '\r')
 continue;
-else if (corrected[e] == '>')
-break;
-else if (!(tag.Count == 0))
+if (s[i + 1] == '/')
+n--;
+for (int j = 0; j < n; j++)
 {
-corrected = corrected + "/" + tag.Peek() + "\n";
-corrected += '<';
-tag.Pop();
-break;
+F += '\t';
 }
-else
-break;
-}
-}
-String temp = "";
-for (int j = k + 1; j < line.Length; j++)
+if (s[i] == '<')
 {
-if (line[j] != '>')
+if (s[i + 1] != '/')
 {
-temp += line[j];
-}
+for (; i < s.Length; i++)
+{
+if (s[i] != '>')
+F += s[i];
 else
 {
-temp += '>';
+F += '>';
+F += '\n';
 break;
 }
 }
-tag.Push(temp);
+n++;
 }
-}
-}
-corrected += "\n";
-}
-while (!(tag.Count == 0))
+else
 {
-corrected = corrected + "</" + tag.Peek() + "\n";
-tag.Pop();
+for (; i < s.Length; i++)
+{
+if (s[i] != '>')
+F += s[i];
+else
+{
+F += '>';
+F += '\n';
+break;
 }
-return (corrected);
 }
 
+
+
+}
+}
+else
+{
+for (; i < s.Length; i++)
+{
+if (s[i] == '\n' || s[i] == '\r' || s[i] == '\t')
+continue;
+if (s[i] != '<')
+F += s[i];
+else
+{
+F += '\n';
+i--;
+break;
+}
+}
+}
+
+
+
+}
+return F;
+}
 
     }
 }
