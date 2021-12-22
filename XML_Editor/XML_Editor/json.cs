@@ -74,7 +74,7 @@ namespace XML_Editor
                 space = Spacing;
             }
             string x = "\t";
-            return "{\n" + output + "\n" + kk + "}";
+            return "{\n" + output + "\n" + space + "}";
         }
 
     }

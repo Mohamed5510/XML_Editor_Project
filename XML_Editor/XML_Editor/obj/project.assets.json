@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
+      "projectUniqueName": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\XML_Editor\\XML_Editor_Project\\XML_Editor_Project\\XML_Editor\\XML_Editor.csproj",
       "projectName": "XML_Editor",
-      "projectPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
+      "projectPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\XML_Editor\\XML_Editor_Project\\XML_Editor_Project\\XML_Editor\\XML_Editor.csproj",
       "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-      "outputPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor\\XML_Editor\\obj\\",
+      "outputPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\XML_Editor\\XML_Editor_Project\\XML_Editor_Project\\XML_Editor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -113,13 +113,21 @@ namespace XML_Editor
         // check Button
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            bool isCorrect = consistency.checkConsistency(textBox1.Text);
+            if (isCorrect)
+            {
+                MessageBox.Show("The file is correct");
+            }
+            else
+                MessageBox.Show("The file is incorrect");
         }
 
         // correct Button
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            textBox2.Text = consistency.correct(textBox1.Text);
+            textBox2.Text = textBox2.Text.Replace("\t", "    ");
+            textBox2.Text = textBox2.Text.Replace("\r\n", "\n").Replace("\n", Environment.NewLine);
         }
 
         // JSON Button
@@ -145,7 +153,9 @@ namespace XML_Editor
         // allign Button
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            textBox2.Text = Formatting.format(textBox1.Text);
+            textBox2.Text = textBox2.Text.Replace("\t", "    ");
+            textBox2.Text = textBox2.Text.Replace("\r\n", "\n").Replace("\n", Environment.NewLine);
         }
 
         // Save Button

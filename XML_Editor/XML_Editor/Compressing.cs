@@ -13,12 +13,12 @@ namespace XML_Editor
      * 
      * 
      */
-    internal class Node
+    internal class HuffmanTreeNode
     {
         public char Symbol { get; set; }
         public int Frequency { get; set; }
-        public Node Right { get; set; }
-        public Node Left { get; set; }
+        public HuffmanTreeNode Right { get; set; }
+        public HuffmanTreeNode Left { get; set; }
 
         public List<bool> Traverse(char symbol, List<bool> data)
         {
@@ -70,8 +70,8 @@ namespace XML_Editor
 
     internal class HuffmanTree
     {
-        private List<Node> nodes = new List<Node>();
-        public Node Root { get; set; }
+        private List<HuffmanTreeNode> nodes = new List<HuffmanTreeNode>();
+        public HuffmanTreeNode Root { get; set; }
         public Dictionary<char, int> Frequencies = new Dictionary<char, int>();
 
         public void Build(string source)
@@ -89,21 +89,21 @@ namespace XML_Editor
 
             foreach (KeyValuePair<char, int> element in Frequencies)
             {
-                Node n = new Node() { Symbol = element.Key, Frequency = element.Value };
+                HuffmanTreeNode n = new HuffmanTreeNode() { Symbol = element.Key, Frequency = element.Value };
                 nodes.Add(n); // Create nodes that contain the symbol and its frequency
             }
 
             while (nodes.Count > 1)
             {
-                List<Node> orderedNodes = nodes.OrderBy(node => node.Frequency).ToList<Node>();
+                List<HuffmanTreeNode> orderedNodes = nodes.OrderBy(node => node.Frequency).ToList<HuffmanTreeNode>();
 
                 if (orderedNodes.Count >= 2)
                 {
                     // Take first two items
-                    List<Node> pair = orderedNodes.Take(2).ToList<Node>();
+                    List<HuffmanTreeNode> pair = orderedNodes.Take(2).ToList<HuffmanTreeNode>();
 
                     // Create a parent node by combining the frequencies
-                    Node parent = new Node()
+                    HuffmanTreeNode parent = new HuffmanTreeNode()
                     {
                         Symbol = '*',
                         Frequency = pair[0].Frequency + pair[1].Frequency,
@@ -139,7 +139,7 @@ namespace XML_Editor
 
         public string Decode(BitArray bits)
         {
-            Node current = this.Root;
+            HuffmanTreeNode current = this.Root;
             string decoded = "";
 
             foreach (bool bit in bits)
@@ -169,8 +169,9 @@ namespace XML_Editor
             return decoded;
         }
 
-        public bool IsLeaf(Node node)
+        public bool IsLeaf(HuffmanTreeNode node)
         {
             return (node.Left == null && node.Right == null);
         }
     }
+}
