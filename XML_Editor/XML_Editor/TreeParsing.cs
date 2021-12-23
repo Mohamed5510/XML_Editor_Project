@@ -185,6 +185,7 @@ namespace XML_Editor
                     }
                 }
             }
+            
             return root;
         }
     }
