@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,7 +134,7 @@ namespace XML_Editor
         // JSON Button
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox2.Text = json.XMLToJson(0,TreeParsing.ParseToTree('\n' + Formatting.format(consistency.correct(textBox1.Text))));
+            textBox2.Text = json.XMLToJson(0, TreeParsing.ParseToTree(textBox1.Text));
             textBox2.Text = textBox2.Text.Replace("\t", "    ");
             textBox2.Text = textBox2.Text.Replace("\r\n", "\n").Replace("\n", Environment.NewLine);
         }
@@ -141,13 +142,45 @@ namespace XML_Editor
         // compress Button
         private void button5_Click(object sender, EventArgs e)
         {
-
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "bin files (*.bin)|*.bin";
+            dialog.Title = "Save Project";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (dialog.FileName != "")
+                {
+                    HuffmanTree t = new HuffmanTree();
+                    BitArray arr = new BitArray(textBox1.Text.Length);
+                    arr = t.Encode(textBox1.Text);
+                    byte[] b = new byte[(arr.Length - 1) / 8 + 1];
+                    arr.CopyTo(b, 0);
+                    using (BinaryWriter w = new BinaryWriter(File.Create(dialog.FileName)))
+                    {
+                        w.Write(b);
+                    }
+                }
+            }
         }
 
         // decompress Button
         private void button6_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Import File";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                List<byte> b = new List<byte>();
+                using (BinaryReader r = new BinaryReader(File.Open(dialog.FileName, FileMode.Open)))
+                {
+                    while(r.BaseStream.Position != r.BaseStream.Length)
+                    {
+                        b.Add(r.ReadByte());
+                    }
+                }
+                BitArray arr = new BitArray(b.ToArray());
+                HuffmanTree t = new HuffmanTree();
+                textBox2.Text = t.Decode(arr);
+            }
         }
 
         // allign Button
@@ -173,7 +206,7 @@ namespace XML_Editor
                     txt.Close();
                 }
             }
-            MessageBox.Show("saved ^_^");
+
         }
 
         // *** Button

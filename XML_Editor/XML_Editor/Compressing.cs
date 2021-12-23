@@ -122,8 +122,9 @@ namespace XML_Editor
 
         }
 
-        public BitArray Encode(string source)
+        public BitArray Encode(string XML)
         {
+            string source = Formatting.format(consistency.correct(XML));
             List<bool> totalEncoded = new List<bool>();
 
             for (int i = 0; i < source.Length; i++)

@@ -97,8 +97,9 @@ namespace XML_Editor
          * 
          * 
          */
-        public static Node ParseToTree(string corrected_and_formatted)
+        public static Node ParseToTree(string XML)
         {
+            string corrected_and_formatted = '\n' + Formatting.format(consistency.correct(XML));
             string[] str = corrected_and_formatted.Split("\n");
             int i;
             // skip the first line if it contains ! or ?
