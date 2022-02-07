@@ -41,8 +41,6 @@ namespace XML_Editor
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -173,9 +171,9 @@ namespace XML_Editor
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.Location = new System.Drawing.Point(402, 1);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 28);
+            this.button9.Size = new System.Drawing.Size(75, 28);
             this.button9.TabIndex = 15;
-            this.button9.Text = "fn";
+            this.button9.Text = "visualize";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -195,32 +193,6 @@ namespace XML_Editor
             this.textBox2.Size = new System.Drawing.Size(496, 542);
             this.textBox2.TabIndex = 6;
             // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(463, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(55, 28);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "fn";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.Location = new System.Drawing.Point(524, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(55, 28);
-            this.button11.TabIndex = 18;
-            this.button11.Text = "fn";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -229,8 +201,6 @@ namespace XML_Editor
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(993, 572);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -264,8 +234,6 @@ namespace XML_Editor
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
     }
 }
 

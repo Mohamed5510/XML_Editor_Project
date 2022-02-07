@@ -178,7 +178,6 @@ namespace XML_Editor
                             if (line[j] == '\t' || line[j] == '\r' || line[j] == '\n')
                                 continue;
                             tag_data += line[j];
-                            // problem: lw el data kaza line
                         }
                         current.setTagData(tag_data);
                         tag_data = "";

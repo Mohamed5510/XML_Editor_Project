@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj": {}
+    "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj": {}
   },
   "projects": {
-    "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj": {
+    "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
+        "projectUniqueName": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
         "projectName": "XML_Editor",
-        "projectPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
+        "projectPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
         "packagesPath": "C:\\Users\\moham\\.nuget\\packages\\",
-        "outputPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\obj\\",
+        "outputPath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\moham\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,24 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutomaticGraphLayout": {
+              "target": "Package",
+              "version": "[1.1.12, )"
+            },
+            "AutomaticGraphLayout.Drawing": {
+              "target": "Package",
+              "version": "[1.1.12, )"
+            },
+            "AutomaticGraphLayout.GraphViewerGDI": {
+              "target": "Package",
+              "version": "[1.1.12, )"
+            },
+            "AutomaticGraphLayout.WpfGraphControl": {
+              "target": "Package",
+              "version": "[1.1.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,6 +72,9 @@
               "privateAssets": "all"
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }
           },

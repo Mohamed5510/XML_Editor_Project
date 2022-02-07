@@ -28,8 +28,6 @@ namespace XML_Editor
         private Rectangle button7Rect;
         private Rectangle button8Rect;
         private Rectangle button9Rect;
-        private Rectangle button10Rect;
-        private Rectangle button11Rect;
         private Size formSize;
 
         public Form1()
@@ -51,8 +49,6 @@ namespace XML_Editor
             button7Rect = new Rectangle(button7.Location.X, button7.Location.Y, button7.Size.Width, button7.Size.Height);
             button8Rect = new Rectangle(button8.Location.X, button8.Location.Y, button8.Size.Width, button8.Size.Height);
             button9Rect = new Rectangle(button9.Location.X, button9.Location.Y, button9.Size.Width, button9.Size.Height);
-            button10Rect = new Rectangle(button10.Location.X, button10.Location.Y, button10.Size.Width, button10.Size.Height);
-            button11Rect = new Rectangle(button11.Location.X, button11.Location.Y, button11.Size.Width, button11.Size.Height);
         }
 
         // function to dynamically resize specific control according to resizing the form
@@ -83,8 +79,6 @@ namespace XML_Editor
             resize_control(button7Rect, button7);
             resize_control(button8Rect, button8);
             resize_control(button9Rect, button9);
-            resize_control(button10Rect, button10);
-            resize_control(button11Rect, button11);
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -209,23 +203,42 @@ namespace XML_Editor
 
         }
 
-        // *** Button
+        // visualize Button
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Node root = TreeParsing.ParseToTree(textBox1.Text);
+            Node r = root.getChildren()[0];
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            foreach (Node user in r.getChildren())
+            {
+                string userId = "";
+                foreach (Node property in user.getChildren())
+                {
+                    if (property.getTagName() == "id")
+                    {
+                        userId = property.getTagData();
+                        break;
+                    }
+                }
+                foreach (Node property in user.getChildren())
+                {
+                    if (property.getTagName() == "followers")
+                    {
+                        foreach (Node follower in property.getChildren())
+                        {
+                            graph.AddEdge(userId, follower.getChildren()[0].getTagData());
+                        }
+                    }
+                }
+            }
+            viewer.Graph = graph;
+            form.SuspendLayout();
+            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            form.Controls.Add(viewer);
+            form.ResumeLayout();
+            form.ShowDialog();
         }
-
-        // *** Button
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // *** Button
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

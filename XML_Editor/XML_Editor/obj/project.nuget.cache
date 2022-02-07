@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3QhGbDW9t4H3fkC/bDPG2irLgMSBDn/W10J+dFSmF5lJSIEgS9TL+Ej1RcvoAe7KMOdbuVzcOEtQGehDdU0ylA==",
+  "dgSpecHash": "sWnuqf4pZJr+U2oU9JtG6Ylk2Zqx8dMUWdaMZgzbZ5ehXl6ImP5PD3HwWNpeRo6QNIzAgsXf0xGEH6FZcHdhGQ==",
   "success": true,
-  "projectFilePath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Studying\\3rd CSE\\1st term\\Data structures & Algorithms\\Final project\\New folder\\XML_Editor_Project\\XML_Editor\\XML_Editor\\XML_Editor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moham\\.nuget\\packages\\automaticgraphlayout\\1.1.12\\automaticgraphlayout.1.1.12.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.12\\automaticgraphlayout.drawing.1.1.12.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.12\\automaticgraphlayout.graphviewergdi.1.1.12.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.12\\automaticgraphlayout.wpfgraphcontrol.1.1.12.nupkg.sha512"
+  ],
   "logs": []
 }
